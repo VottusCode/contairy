@@ -1,6 +1,6 @@
 {
-  "name": "@matherioneu/container",
-  "version": "1.0.1-2",
+  "name": "contairy",
+  "version": "1.0.0",
   "license": "GPL-3.0-only",
   "private": false,
   "author": "Mia <vottus@vott.us>",
@@ -20,5 +20,7 @@
     "prettier": "^2.3.0",
     "typescript": "^4.2.4",
     "@typescript-eslint/parser": "^4.23.0"
-  }
+  },
+  "repository": "https://github.com/VottusCode/contairy",
+  "bugs": "https://github.com/VottusCode/contairy/issues"
 }

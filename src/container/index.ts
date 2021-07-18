@@ -1,6 +1,6 @@
 /**
- * Simple Service Container for Node.js written in TypeScript.
- * Copyright (C) 2021 Filip "Mia" Vottus
+ * Contairy - Simple Service Container for Node.js written in TypeScript.
+ * Copyright (C) 2021 Mia Vottus
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,22 +19,22 @@
 /**
  * The Container class representing the Service Container.
  */
-class Container {
-  _services: Record<string, unknown> = {}
+class Container<TServices extends Record<string, unknown> = Record<string, unknown>> {
+  _services: Partial<TServices> = {}
 
-  constructor(services?: Record<string, unknown>) {
+  constructor(services?: TServices) {
     if (services) this.register(services)
   }
 
   /**
    * Register services in the container.
    *
-   * @param {Record<string, unknown>} services
+   * @param {T} services
    * @returns {Container} Instance of this container
    */
-  public register(services: Record<string, unknown>): Container {
+  public register<T extends Record<string, unknown> = Record<string, unknown>>(services: T): Container {
     for (const serviceName in services) {
-      this._services[serviceName] = services[serviceName]
+      this._services[serviceName] = services[serviceName] as any;
     }
 
     return this
@@ -54,8 +54,8 @@ class Container {
    * Unregister services from the container.
    * @param serviceNames Names of services to unregister
    */
-  public unregister(serviceNames: string[]) {
-    serviceNames.forEach((name) => (this._services[name] = undefined))
+  public unregister(serviceNames: string[]): void {
+    serviceNames.forEach((name) => (delete this._services[name]))
   }
 }
 

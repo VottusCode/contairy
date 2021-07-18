@@ -1,15 +1,17 @@
-# @matherioneu/container
+# Contairy
 
 Simple Service Container for Node.js written in TypeScript.
+
+(formerly `@matherioneu/container`)
 
 ## Setup
 
 ### Installation
 
 ```shell
-$ yarn add @matherioneu/container
+$ yarn add contairy
 # NPM:
-$ npm i @matherioneu/container
+$ npm i contairy
 ```
 
 ## Usage
@@ -31,7 +33,7 @@ const services = {
 #### Usage 1 - `Container#register(services)`
 
 ```ts
-import { useContainer } from '@matherioneu/container'
+import { useContainer } from 'contairy'
 
 // ...
 
@@ -45,7 +47,7 @@ container.register(services)
 #### Usage 2 - `registerContainerServices(services)`
 
 ```ts
-import { registerContainerServices } from '@matherioneu/container'
+import { registerContainerServices } from 'contairy'
 
 // ...
 
@@ -77,7 +79,7 @@ In your application, you can create more Container instance, but only the main o
 You can set the main Controller instance with the `setContainer(container)` function:
 
 ```ts
-import { useContainer, setContainer, Container } from '@matherioneu/container'
+import { useContainer, setContainer, Container } from 'contairy'
 
 // Calling the useContainer will now
 // give you the default Container instance
