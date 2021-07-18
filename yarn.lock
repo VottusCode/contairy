@@ -38,13 +38,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@matherioneu/container@^1.0.1-1":
-  version "1.0.1-1"
-  resolved "https://registry.yarnpkg.com/@matherioneu/container/-/container-1.0.1-1.tgz#7513cae5822b17b11cc9c020a15d00fb0982dfe1"
-  integrity sha512-YYkjx2hU1bsBMSbebSECoLsXws/ZrrZQ6JdC2uXmv8QmMwSY39QK6Nyq1b16PJjQUMJflsL5bFFKe7vDV3N05Q==
-  dependencies:
-    "@typescript-eslint/parser" "^4.23.0"
-
 "@matherioneu/ts@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@matherioneu/ts/-/ts-1.0.1.tgz#9617854b737a1a6c723303c38adc22e3ca7a7a2c"
